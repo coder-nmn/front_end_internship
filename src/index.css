@@ -1,0 +1,485 @@
+/* ============================================
+   FINDASH — Design System & Global Reset
+   ============================================ */
+
+/* --- Light Mode (default) --- */
+:root {
+  /* Background */
+  --bg-primary: hsl(220, 20%, 97%);
+  --bg-secondary: hsl(220, 15%, 92%);
+  --bg-tertiary: hsl(220, 14%, 88%);
+  --bg-card: hsl(0, 0%, 100%);
+  --bg-card-hover: hsl(220, 20%, 98%);
+  --bg-card-solid: hsl(0, 0%, 100%);
+  --bg-input: hsl(220, 15%, 95%);
+  --bg-modal-overlay: hsla(222, 47%, 11%, 0.3);
+
+  /* Borders */
+  --border-primary: hsl(220, 15%, 88%);
+  --border-hover: hsl(220, 15%, 80%);
+  --border-accent: hsla(258, 90%, 60%, 0.4);
+
+  /* Text */
+  --text-primary: hsl(222, 47%, 11%);
+  --text-secondary: hsl(215, 20%, 40%);
+  --text-tertiary: hsl(215, 15%, 60%);
+
+  /* Accent */
+  --accent-primary: hsl(258, 90%, 60%);
+  --accent-primary-hover: hsl(258, 90%, 52%);
+  --accent-primary-bg: hsl(258, 90%, 95%);
+  --accent-primary-glow: hsla(258, 90%, 60%, 0.2);
+
+  /* Semantic */
+  --color-income: hsl(152, 69%, 40%);
+  --color-income-bg: hsl(152, 69%, 92%);
+  --color-income-glow: hsla(152, 69%, 40%, 0.2);
+
+  --color-expense: hsl(350, 89%, 55%);
+  --color-expense-bg: hsl(350, 89%, 94%);
+  --color-expense-glow: hsla(350, 89%, 55%, 0.2);
+
+  --color-warning: hsl(38, 92%, 45%);
+  --color-warning-bg: hsla(38, 92%, 45%, 0.1);
+
+  --color-info: hsl(199, 89%, 48%);
+  --color-info-bg: hsla(199, 89%, 48%, 0.1);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px hsla(222, 47%, 11%, 0.04);
+  --shadow-md: 0 4px 24px hsla(222, 47%, 11%, 0.08);
+  --shadow-lg: 0 8px 32px hsla(222, 47%, 11%, 0.14);
+  --shadow-xl: 0 16px 48px hsla(222, 47%, 11%, 0.16);
+  --shadow-glow: 0 0 16px var(--accent-primary-glow);
+
+  /* Scrollbar */
+  --scrollbar-thumb: hsla(215, 20%, 40%, 0.2);
+  --scrollbar-thumb-hover: hsla(215, 20%, 40%, 0.35);
+
+  /* Header backdrop */
+  --header-bg: hsla(220, 20%, 97%, 0.85);
+
+  /* Chart Colors (vivid, same for both modes) */
+  --chart-1: hsl(258, 90%, 66%);
+  --chart-2: hsl(152, 69%, 55%);
+  --chart-3: hsl(38, 92%, 55%);
+  --chart-4: hsl(199, 89%, 55%);
+  --chart-5: hsl(350, 89%, 62%);
+  --chart-6: hsl(280, 70%, 60%);
+
+  /* Category Colors (vivid, same for both modes) */
+  --cat-food: hsl(25, 95%, 53%);
+  --cat-transport: hsl(199, 89%, 48%);
+  --cat-shopping: hsl(280, 67%, 55%);
+  --cat-entertainment: hsl(340, 82%, 52%);
+  --cat-bills: hsl(45, 93%, 47%);
+  --cat-health: hsl(152, 69%, 45%);
+  --cat-education: hsl(210, 79%, 46%);
+  --cat-salary: hsl(152, 69%, 55%);
+  --cat-freelance: hsl(170, 70%, 45%);
+  --cat-investments: hsl(258, 90%, 66%);
+  --cat-rent: hsl(15, 80%, 50%);
+  --cat-groceries: hsl(80, 60%, 45%);
+  --cat-travel: hsl(200, 70%, 50%);
+  --cat-subscriptions: hsl(300, 60%, 50%);
+  --cat-gifts: hsl(330, 70%, 55%);
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-xs: 0.75rem;
+  --font-sm: 0.8125rem;
+  --font-base: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 1.5rem;
+  --font-2xl: 2rem;
+  --font-3xl: 2.5rem;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 72px;
+  --header-height: 64px;
+}
+
+/* --- Dark Mode --- */
+[data-theme="dark"] {
+  --bg-primary: hsl(222, 47%, 8%);
+  --bg-secondary: hsl(220, 40%, 12%);
+  --bg-tertiary: hsl(220, 35%, 17%);
+  --bg-card: hsl(220, 35%, 14%);
+  --bg-card-hover: hsl(220, 35%, 17%);
+  --bg-card-solid: hsl(220, 35%, 14%);
+  --bg-input: hsl(220, 35%, 11%);
+  --bg-modal-overlay: hsla(0, 0%, 0%, 0.6);
+
+  --border-primary: hsl(220, 25%, 22%);
+  --border-hover: hsl(220, 25%, 30%);
+  --border-accent: hsla(258, 90%, 70%, 0.4);
+
+  --text-primary: hsl(210, 40%, 96%);
+  --text-secondary: hsl(215, 20%, 70%);
+  --text-tertiary: hsl(215, 15%, 50%);
+
+  --accent-primary: hsl(258, 90%, 70%);
+  --accent-primary-hover: hsl(258, 90%, 76%);
+  --accent-primary-bg: hsl(258, 90%, 15%);
+  --accent-primary-glow: hsla(258, 90%, 70%, 0.25);
+
+  --color-income: hsl(152, 69%, 55%);
+  --color-income-bg: hsl(152, 69%, 12%);
+  --color-income-glow: hsla(152, 69%, 55%, 0.25);
+
+  --color-expense: hsl(350, 89%, 65%);
+  --color-expense-bg: hsl(350, 89%, 12%);
+  --color-expense-glow: hsla(350, 89%, 65%, 0.25);
+
+  --color-warning: hsl(38, 92%, 55%);
+  --color-warning-bg: hsla(38, 92%, 55%, 0.12);
+
+  --color-info: hsl(199, 89%, 55%);
+  --color-info-bg: hsla(199, 89%, 55%, 0.12);
+
+  --shadow-sm: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+  --shadow-md: 0 4px 24px hsla(0, 0%, 0%, 0.4);
+  --shadow-lg: 0 8px 32px hsla(0, 0%, 0%, 0.6);
+  --shadow-xl: 0 16px 48px hsla(0, 0%, 0%, 0.6);
+  --shadow-glow: 0 0 20px var(--accent-primary-glow);
+
+  --scrollbar-thumb: hsla(215, 20%, 40%, 0.3);
+  --scrollbar-thumb-hover: hsla(215, 20%, 40%, 0.5);
+
+  --header-bg: hsla(222, 47%, 8%, 0.85);
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-base);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-primary-hover);
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: var(--font-base);
+  color: var(--text-primary);
+}
+
+input, select, textarea {
+  font-family: var(--font-family);
+  font-size: var(--font-base);
+  color: var(--text-primary);
+  background: var(--bg-input);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background 0.3s ease;
+  width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-primary-bg);
+}
+
+input::placeholder {
+  color: var(--text-tertiary);
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* --- Utility Classes --- */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), background 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.glass-card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: var(--font-base);
+  line-height: 1;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  transition: background var(--transition-fast);
+}
+
+.btn:hover::after {
+  background: hsla(0, 0%, 100%, 0.06);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: 0 2px 8px var(--accent-primary-glow);
+}
+
+.btn-primary:hover {
+  background: var(--accent-primary-hover);
+  box-shadow: 0 4px 16px var(--accent-primary-glow);
+}
+
+.btn-secondary {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  border-color: var(--border-hover);
+}
+
+.btn-danger {
+  background: var(--color-expense-bg);
+  color: var(--color-expense);
+  border: 1px solid var(--color-expense-bg);
+}
+
+.btn-danger:hover {
+  background: var(--color-expense-bg);
+  border-color: var(--color-expense);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  padding: var(--space-2) var(--space-3);
+}
+
+.btn-ghost:hover {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+
+.btn-sm {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-sm);
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: var(--radius-md);
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.badge-income {
+  background: var(--color-income-bg);
+  color: var(--color-income);
+}
+
+.badge-expense {
+  background: var(--color-expense-bg);
+  color: var(--color-expense);
+}
+
+.badge-accent {
+  background: var(--accent-primary-bg);
+  color: var(--accent-primary);
+}
+
+.badge-warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in { animation: fadeIn var(--transition-base) ease forwards; }
+.animate-fade-in-up { animation: fadeInUp var(--transition-slow) ease forwards; }
+.animate-scale-in { animation: scaleIn var(--transition-base) ease forwards; }
+
+/* Staggered animations */
+.stagger-1 { animation-delay: 50ms; }
+.stagger-2 { animation-delay: 100ms; }
+.stagger-3 { animation-delay: 150ms; }
+.stagger-4 { animation-delay: 200ms; }
+.stagger-5 { animation-delay: 250ms; }
+.stagger-6 { animation-delay: 300ms; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+}
