@@ -162,29 +162,21 @@ src/
 
 ## 📸 Screenshots
 
-> ![alt text](image.png)
-
 ### Dashboard
 
-<!-- ![Dashboard](./screenshots/dashboard.png) -->
-
-_Summary cards, balance trend chart, spending breakdown donut, recent transactions_
+> ![alt text](image.png)
 
 ### Transactions
 
-<!-- ![Transactions](./screenshots/transactions.png) -->
-
-_Filterable/sortable table with search, CRUD modal, export buttons_
+> ![alt text](image-1.png)
 
 ### Insights
 
-<!-- ![Insights](./screenshots/insights.png) -->
-
-_Smart cards, top categories bar chart, savings goal ring, monthly comparison_
+> ![alt text](image-2.png)
 
 ### Role Switching
 
-<!-- ![Roles](./screenshots/roles.png) -->
+> ![alt text](image-3.png)
 
 _Admin vs Viewer UI comparison — action buttons appear/hide_
 
